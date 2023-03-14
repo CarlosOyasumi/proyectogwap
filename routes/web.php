@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RegistroController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,5 +22,7 @@ Route::view('/instrucciones','instruc')->name('instruc');
 
 Route::view('/Login','login')->name('login');
 
-Route::view('/registro','registro')->name('registro');
+route::view('/registro', 'auth.registro')->name('registro');
+
+Route::post('/registro', [RegistroController::class, 'store'])->name('registro');
 

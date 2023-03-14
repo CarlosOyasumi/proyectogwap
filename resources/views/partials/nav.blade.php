@@ -23,12 +23,17 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ route('registro') }}">Registro</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('login') }}">Login</a>
-          </li>
+         
          
         </ul>
       </div>
     </div>
+    <div class="container-fluid  justify-content-center mx-auto">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('login') }}">Login</a>
+        </li>
+      </ul>
+      </div>
   </nav>
 </section>

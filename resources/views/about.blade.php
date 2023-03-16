@@ -35,7 +35,7 @@
    
    
     
-<section class="cuadro"> 
+<section class="cuadro2"> 
 <div class="container justify-content-center mx-auto">
 
     <p>Para crear un juego Gwap con HTML, PHP y Laravel, los estudiantes necesitarían conocimientos sólidos en programación y diseño web. Podrían usar PHP para crear la funcionalidad del servidor y comunicar la información del juego con la base de datos. Laravel sería útil para proporcionar un marco robusto para la creación y gestión de rutas, así como para la implementación de autenticación y seguridad.</p>

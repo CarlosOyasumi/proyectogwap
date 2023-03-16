@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
-use App\Models\Persona;
+use App\Models\User;
 
 class RegistroController extends Controller
 {
@@ -29,7 +30,7 @@ public function store(Request $request)
 
     ]);
     
-    Persona::create([
+    User::create([
         'nombre' => $request->input('nombre'),
         'email' => $request->input('email'),
         'nacimiento' =>$request->input('nacimiento'),

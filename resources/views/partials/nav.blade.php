@@ -20,20 +20,50 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ route('instruc') }}">Instrucciones</a>
           </li>
+          @guest
           <li class="nav-item">
             <a class="nav-link" href="{{ route('registro') }}">Registro</a>
           </li>
+          
+
+          @endguest
+         
+       
          
          
         </ul>
       </div>
     </div>
     <div class="container-fluid  justify-content-center mx-auto">
+      @guest
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="{{ route('login') }}">Login</a>
         </li>
       </ul>
+      @else
+      <div class="btn-group mr-auto" >
+        <button class="btnc btn-secondary dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+              @auth
+              <span class="espacios">  ¡Hola
+                {{ Auth::user()->nombre }}!
+              </span>
+             
+              @endauth
+        </button>
+        <div class="dropdown-menu dropdown-menu-start" aria-labelledby="triggerId">
+          <a class="dropdown-item" href="#">Action</a>
+    
+          <h6 class="dropdown-header">Opciones</h6>
+          <a class="dropdown-item" href="{{ route('Cerrar') }}">Salir</a>
+          
+        </div>
+      </div>
+      @endguest
+      
+    
+      
       </div>
   </nav>
 </section>

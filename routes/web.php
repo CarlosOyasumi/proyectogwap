@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthenticatedSessionController;
 use App\Http\Controllers\RegistroController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,9 +21,14 @@ Route::view('/Nosotros','about')->name('about');
 
 Route::view('/instrucciones','instruc')->name('instruc');
 
-Route::view('/Login','login')->name('login');
+
+route::view('/login', 'auth.login')->name('login');
 
 route::view('/registro', 'auth.registro')->name('registro');
 
-Route::post('/registro', [RegistroController::class, 'store'])->name('registro');
+Route::post('/login', [AuthenticatedSessionController::class,'store']);
+
+Route::post('/registro', [RegistroController::class, 'store'])->name('registro.pros');
+
+Route::get('/logout',[AuthenticatedSessionController::class, 'logout'])->name('Cerrar');
 

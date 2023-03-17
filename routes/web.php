@@ -21,6 +21,8 @@ Route::view('/Nosotros','about')->name('about');
 
 Route::view('/instrucciones','instruc')->name('instruc');
 
+Route::view('/Configuracion','config')->middleware('auth')->name('config');
+
 
 route::view('/login', 'auth.login')->name('login');
 

@@ -11,7 +11,7 @@
             <form action="{{ route('login') }}" method="POST">
                 
                 @csrf
-                <h1 class="loletras">Iniciar sesión</h1>
+                <h1 class="loletras"><i class="fa-solid fa-house-user"></i> Iniciar sesión</h1>
                 <br>
                 @if ($errors->any())
                 <div class="alert alert-danger">
@@ -25,14 +25,14 @@
                 
                 
                 <div clas="inputbox">
-                    <label for="floatingInput">Correo</label>
+                    <label for="floatingInput"> <i class="fa-regular fa-envelope"></i> Correo</label>
                     <input type="email" class="form-control" id="floatingInput" placeholder="name@gmail.com" name="email" required>
                     
 
                 </div>
                 <br>
                 <div clas="inputbox">
-                    <label for="floatingPassword">Contraseña</label>
+                    <label for="floatingPassword"><i class="fa-solid fa-key"></i> Contraseña</label>
                     <input type="password" class="form-control" id="floatingPassword" placeholder="contraseña" name="password">
                     
 
@@ -42,7 +42,7 @@
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" name="recuerdame">
                   <label class="form-check-label" for="">
-                    Recuerdame
+                    <i class="fa-solid fa-bookmark"></i> Recuerdame 
                   </label>
                 
                   <br>
@@ -51,7 +51,7 @@
                 <br>
                 <div class="registro">
                     <h5>¿No tienes una cuenta?</h5>
-                    <a class="h1"href="{{ route('registro') }}"> ¡Registrate!</a>
+                    <a class="h1"href="{{ route('registro') }}"> <i class="fa-solid fa-address-card"></i> ¡Registrate!</a>
 
                 </div>
             </form>

@@ -9,10 +9,13 @@
     @vite(['resources/css/app.scss' , 'resources/js/app.js'])
 </head>
 <body>
-    @include('partials.nav')
-    <br>
+    @include('partials.settnav')
+    
 
     @yield('content')
+</div>
+    
+</div>
 
     
 </body>

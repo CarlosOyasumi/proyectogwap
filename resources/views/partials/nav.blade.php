@@ -46,17 +46,17 @@
         <button class="btnc btn-secondary dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
               @auth
-              <span class="espacios">  ¡Hola
+              <span class="espacios">  <i class="fa-solid fa-user-astronaut"></i> ¡Hola
                 {{ Auth::user()->nombre }}!
               </span>
              
               @endauth
         </button>
         <div class="dropdown-menu dropdown-menu-start" aria-labelledby="triggerId">
-          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="{{ route('config') }}"> <i class="fa-solid fa-gear"></i> Configuración </a>
     
-          <h6 class="dropdown-header">Opciones</h6>
-          <a class="dropdown-item" href="{{ route('Cerrar') }}">Salir</a>
+          <h6 class="dropdown-header">¿Ya tienes que irte?</h6>
+          <a class="dropdown-item" href="{{ route('Cerrar',) }}"> <i class="fa-solid fa-right-to-bracket"></i> Salir</a>
           
         </div>
       </div>

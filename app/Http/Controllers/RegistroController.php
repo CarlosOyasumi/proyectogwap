@@ -47,4 +47,31 @@ public function store(Request $request)
 
 }
 
+public function actualizar(Request $request, $id){
+    $request->validate([
+        'nombre' =>'required', 'string', 'max:255',
+        'password'=>'required','confirmed',
+        'sexo'=>'required','string',
+        'nacimiento'=>'required','date',
+
+    ]);
+
+
+    $user=User::find($id);
+    $user->nombre =$request->input('nombre');
+    $user->sexo =$request->input('sexo');
+    $user->password =bcrypt($request->input('password'));
+    $user->nacimiento =$request->input('nacimiento');
+    $user->save();
+    
+    
+
+       
+
+    
+   session()->flash('status','Haz actualizado tus datos');
+
+    return redirect()->route('config');
+}
+
 }

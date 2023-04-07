@@ -32,5 +32,7 @@ Route::post('/login', [AuthenticatedSessionController::class,'store']);
 
 Route::post('/registro', [RegistroController::class, 'store'])->name('registro.pros');
 
+Route::post('/Actualizar/{id}', [RegistroController::class, 'actualizar'])->name('actualizar.pros');
+
 Route::get('/logout',[AuthenticatedSessionController::class, 'logout'])->name('Cerrar');
 

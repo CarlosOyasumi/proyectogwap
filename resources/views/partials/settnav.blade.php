@@ -21,8 +21,20 @@
 
     <div>
         <ul class="list-unstyled px-2">
-           <li class="active"><a href="#" class="h4 text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-house"></i>Configurar</a></li>
+           <li class="{{ request()->is('/Configuracion') ? "active" : " " }}"><a href="{{ route('config')}}" class="h4 text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-house"></i>Configurar</a></li>
         </ul>
+      
+      
+     
+        @if (Auth::user()->admin==1)
+        <ul class="list-unstyled px-2">
+            <li class="{{ request()->is('/Configuracion/Admin/Agregar') ? "active" : " " }}"><a href="{{  route('agregar')}}" class="h4 text-decoration-none px-3 py-2 d-block"><i class="fa-regular fa-images"></i>Agregar una nueva imagen</a></li>
+         </ul>
+         <ul class="list-unstyled px-2">
+            <li class="{{ request()->is('/Configuracion/configuracion/Admin/Galeria') ? "active" : " " }}"><a href="{{ route('Viewcontrollerimg') }}" class="h4 text-decoration-none px-3 py-2 d-block"><i class="fa-regular fa-images"></i>Galeria de imagenes</a></li>
+         </ul>
+    @endif
+       
         <ul class="list-unstyled px-2">
             <li class=""><a href="/" class="h4 text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-house"></i>Volver</a></li>
          </ul>

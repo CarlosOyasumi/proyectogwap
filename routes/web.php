@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\Filecontroller;
 use App\Http\Controllers\AuthenticatedSessionController;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\Filecontroller as ControllersFilecontroller;
 use App\Http\Controllers\RegistroController;
+use App\Http\Controllers\Visorimagenes;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +27,11 @@ Route::view('/instrucciones','instruc')->name('instruc');
 
 Route::view('/Configuracion','config')->middleware('auth')->name('config');
 
+Route::view('/Configuracion/Admin/Agregar','auth.agregarimg')->middleware('auth')->name('agregar');
+
+
+route::get('/configuracion/Admin/Galeria', [Visorimagenes::class, 'index'])->name('Viewcontrollerimg');
+
 
 route::view('/login', 'auth.login')->name('login');
 
@@ -32,7 +41,10 @@ Route::post('/login', [AuthenticatedSessionController::class,'store']);
 
 Route::post('/registro', [RegistroController::class, 'store'])->name('registro.pros');
 
+Route::post('/Configuracion/admin/agregar', [ControllersFilecontroller::class, 'store'])->name('Agregarimagen');
+
 Route::post('/Actualizar/{id}', [RegistroController::class, 'actualizar'])->name('actualizar.pros');
 
 Route::get('/logout',[AuthenticatedSessionController::class, 'logout'])->name('Cerrar');
+
 

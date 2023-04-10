@@ -13,4 +13,10 @@ class Visorimagenes extends Controller
         $image = imagene::all();
         return view('viewimg' , compact('image'));
     }
+
+    public function play()
+    {
+        $image = imagene::all();
+        return view('Thegame' , compact('image'));
+    }
 }

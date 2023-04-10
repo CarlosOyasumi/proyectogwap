@@ -18,6 +18,8 @@
             @endif
 
             @csrf
+            <h1>¡Agrega las imagenes para el juego!</h1>
+            <h2>El limite de archivo es de 1 mb</h2>
             <div class="custom-file mb">
                 <input type="file" class="custom-file-input" id="customFile" name="name">
                 <label class="custom-file-label" for="customFile">Elegir archivo</label>

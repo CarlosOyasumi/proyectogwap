@@ -20,7 +20,10 @@
             <center>
                 <h2>¡Gracias por registrarte!</h2>
                 <h2>Puede que tengas un par de dudas antes de iniciar a jugar, así que te recomendamos que leas primero las instrucciones</h2>
+                <a href="{{ route('play') }}" class="btn">Jugar</a>
             </center>
+            
+            
             
             
         @endguest

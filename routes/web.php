@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/','home');
+Route::view('/','home')->name('home');
 
 Route::view('/Nosotros','about')->name('about');
 
@@ -30,7 +30,11 @@ Route::view('/Configuracion','config')->middleware('auth')->name('config');
 Route::view('/Configuracion/Admin/Agregar','auth.agregarimg')->middleware('auth')->name('agregar');
 
 
-route::get('/configuracion/Admin/Galeria', [Visorimagenes::class, 'index'])->name('Viewcontrollerimg');
+route::get('/configuracion/Admin/Galeria', [Visorimagenes::class, 'index'])->middleware('auth')->name('Viewcontrollerimg');
+
+route::get('/play', [Visorimagenes::class, 'play'])->middleware('auth')->name('play');
+
+
 
 
 route::view('/login', 'auth.login')->name('login');

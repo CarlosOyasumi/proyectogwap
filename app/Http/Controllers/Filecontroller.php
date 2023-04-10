@@ -30,7 +30,7 @@ class Filecontroller extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' =>'required|image|max:255',
+            'name' =>'required|image|max:1024',
     
         ]);
         $imagenes = $request->file('name')->store('public/imagenes');

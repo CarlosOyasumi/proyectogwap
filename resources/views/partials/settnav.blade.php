@@ -36,7 +36,7 @@
     @endif
        
         <ul class="list-unstyled px-2">
-            <li class=""><a href="/" class="h4 text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-house"></i>Volver</a></li>
+            <li class=""><a href="{{ route('home') }}" class="h4 text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-house"></i>Volver</a></li>
          </ul>
        
         

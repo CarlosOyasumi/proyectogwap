@@ -10,9 +10,9 @@
         <span id="countdown" class="countdown-timer">3:00</span>
 <button id="start-btn" class="start-button">Empezar</button>
     </div>
-
-    <div class="card-group">
-        @foreach ($image as $item)
+    <div class="card-columns">
+    <div class="card-group image-container">
+        @foreach ($imagenesAleatorias as $item)
        
         <div class="card">
             <img class="card-img-top" src="{{ asset($item->name) }}" alt="">
@@ -21,6 +21,7 @@
                 </div>
         </div>
         @endforeach
+    </div>
     </div>
 </center>
 

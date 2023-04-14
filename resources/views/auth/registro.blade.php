@@ -32,37 +32,37 @@
 
             @csrf
             <div class="col-6">
-                <label for="tex" class="form-label"><i class="fa-regular fa-user"></i> Nombre</label>
+                <label for="tex" class="form-label x"><i class="fa-regular fa-user"></i> Nombre</label>
                 <input type="text" class="form-control" name="nombre" >
                 </div>
     
     
                 <div class="col-6">
-                <label for="tex" class="form-label"> <i class="fa-regular fa-envelope"></i> Email</label>
+                <label for="tex" class="form-label x"> <i class="fa-regular fa-envelope"></i> Email</label>
                 <input type="email" class="form-control" name="email">
                 </div>
     
     
                 <div class="col-6">
-                <label for="tex" class="form-label"> <i class="fa-solid fa-lock"></i> Contraseña</label>
+                <label for="tex" class="form-label x"> <i class="fa-solid fa-lock"></i> Contraseña</label>
                 <input type="password" class="form-control" name="password">
                 </div>
     
     
                 <div class="col-6">
-                <label for="tex" class="form-label"> <i class="fa-solid fa-lock"></i> Confirmar contraseña</label>
+                <label for="tex" class="form-label x"> <i class="fa-solid fa-lock"></i> Confirmar contraseña</label>
                 <input type="password" class="form-control" name="password_confirmation">
                 </div>
     
                 <div class="col-6">
-                <label for="tex" class="form-label"> <i class="fa-solid fa-cake-candles"></i> Fecha de nacimiento</label>
+                <label for="tex" class="form-label x"> <i class="fa-solid fa-cake-candles"></i> Fecha de nacimiento</label>
                 <input type="date" class="form-control" name="nacimiento">
                 </div>
     
                 <div class="col-4">
                 <p>
                     
-                    <label for="tex" class="form-label"> <i class="fa-solid fa-venus-mars"></i> Género:</label>
+                    <label for="tex" class="form-label "> <i class="fa-solid fa-venus-mars"></i> Género:</label>
                     
     
                     <select  class="form-control" id="SexoInput" name="sexo">

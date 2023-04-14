@@ -26,7 +26,7 @@
               <img class="imgRedonda" src="{{ asset('img/Edgar.jpg') }}" alt="Title">
               <div class="card-body">
                 <h4 class="card-title">Edgar Zambrano</h4>
-                <p class="card-text">Estudiante de Ing. informatica</p>
+                <p class="card-text">...</p>
               </div>
             </div>
         

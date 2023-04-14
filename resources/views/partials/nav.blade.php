@@ -24,7 +24,10 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ route('registro') }}">Registro</a>
           </li>
-          
+          @else
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('puntuaciones') }}">Puntuaciones</a>
+          </li>
 
           @endguest
          

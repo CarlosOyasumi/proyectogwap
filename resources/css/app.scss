@@ -119,6 +119,9 @@
   border-radius: 5px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
 }
+.hidden {
+  display: none;
+}
 
 .start-button {
   background-color: #28a745;
@@ -129,20 +132,60 @@
   cursor: pointer;
 }
 
-.image-container {
-  width: 600px;
-  height: 600px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.card-group {
+  margin: 0 auto; /* Para centrar horizontalmente */
+  display: flex; /* Para ajustar el ancho de las imágenes */
+  flex-wrap: wrap; /* Para permitir que las imágenes se ajusten a diferentes tamaños de pantalla */
+  justify-content: center; /* Para centrar verticalmente */
 }
-.image-container img {
+
+form label.form-label {
+  color: black;
+}
+
+.card {
+  width: 300px; /* Ancho fijo para todas las tarjetas */
+  border-radius: 70px;
+}
+.card-img-top {
   max-width: 100%;
-  max-height: 100%;
-  display: block;
-  margin: 0 auto;
+  width: 100%; /* Para que las imágenes se ajusten a la tarjeta */
+  height: auto; /* Para mantener la proporción de aspecto de la imagen */
+  object-fit: cover; /* Para recortar la imagen según el tamaño de la tarjeta */
+}
+
+p {
+  color:#000;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.card-columns {
+  display: flex;
+  justify-content: center;
+}
+
+.image-container .card {
+  width: 700px;
   border-radius: 50px;
+}
+
+.image-container .card-img-top {
+  height: 500px;
+  border-radius: 70px;
+  object-fit: cover;
+}
+
+
+#image-container {
+  text-align: center;
 }
 
 .start-button:hover {
@@ -216,6 +259,10 @@ form {
     min-height: 100vh;
     width: 100%;
     
+  }
+
+  .x {
+    color: white;
   }
   .dropdown-menu {
     background-color: #020104;; /* color de fondo */
